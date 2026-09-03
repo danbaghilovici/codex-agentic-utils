@@ -1,0 +1,5 @@
+interface:
+  display_name: "ADR Create"
+  short_description: "Research and draft an approved architecture decision record"
+policy:
+  allow_implicit_invocation: false

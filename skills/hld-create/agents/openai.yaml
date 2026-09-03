@@ -1,0 +1,5 @@
+interface:
+  display_name: "HLD Create"
+  short_description: "Draft and review an approval-gated architecture design"
+policy:
+  allow_implicit_invocation: false
