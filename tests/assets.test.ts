@@ -3,11 +3,19 @@ import path from "node:path";
 
 import { describe, expect, it } from "vitest";
 
-import { AGENT_NAMES, SKILL_NAMES } from "../src/constants.js";
+import { AGENT_NAMES, PACKAGE_VERSION, SKILL_NAMES } from "../src/constants.js";
 
 const root = path.resolve(import.meta.dirname, "..");
 
 describe("Codex asset contracts", () => {
+  it("keeps the CLI version aligned with the package version", async () => {
+    const packageManifest = JSON.parse(
+      await readFile(path.join(root, "package.json"), "utf8"),
+    ) as { version: string };
+
+    expect(PACKAGE_VERSION).toBe(packageManifest.version);
+  });
+
   it("has valid opt-in skills without Claude references", async () => {
     for (const name of SKILL_NAMES) {
       const skill = await readFile(
