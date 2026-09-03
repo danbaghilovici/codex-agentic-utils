@@ -73,25 +73,27 @@ describe("safe installer", () => {
         "utf8",
       ),
     ).toBe("custom");
-    expect(await readFile(path.join(root, "AGENTS.md"), "utf8")).toContain(
-      "Keep this.",
-    );
-    expect(await readFile(path.join(root, "AGENTS.md"), "utf8")).toContain(
-      "$adr-create",
-    );
-    expect(
-      await readFile(
-        path.join(
-          root,
-          ".agents",
-          "skills",
-          "hld-create",
-          "assets",
-          "hld-template.md",
-        ),
+    const agents = await readFile(path.join(root, "AGENTS.md"), "utf8");
+    expect(agents).toContain("Keep this.");
+    expect(agents).toContain("$adr-create");
+    expect(agents).toContain("bundled assets/adr-template.md");
+    expect(agents).toContain("bundled assets/hld-template.md");
+    expect(agents).not.toContain("missing project template");
+
+    for (const [skill, template] of [
+      ["adr-create", "adr-template.md"],
+      ["hld-create", "hld-template.md"],
+    ]) {
+      const installedTemplate = await readFile(
+        path.join(root, ".agents", "skills", skill, "assets", template),
         "utf8",
-      ),
-    ).toContain("# HLD:");
+      );
+      const packagedTemplate = await readFile(
+        path.join(packageRoot, "skills", skill, "assets", template),
+        "utf8",
+      );
+      expect(installedTemplate).toBe(packagedTemplate);
+    }
   });
 
   it("preserves a customized managed file and customized AGENTS.md on update", async () => {

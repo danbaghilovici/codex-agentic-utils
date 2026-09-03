@@ -27,9 +27,9 @@ Use the installed ADR and HLD workflows only when the user explicitly invokes $a
 $hld-create. The workflows use the custom agents installed under .codex/agents/; they may also
 be selected directly when their specialist role fits the user request.
 
-- $adr-create writes approved ADRs under docs/adr/ using adr-template.md.
-- $hld-create writes approved architecture documents under docs/hld/ using hld-template.md.
-- Do not create a missing project template without first asking the user to confirm.
+- $adr-create uses its bundled assets/adr-template.md and writes approved ADRs under docs/adr/.
+- $hld-create uses its bundled assets/hld-template.md and writes approved architecture documents
+  under docs/hld/.
 ${AGENTS_END}`;
 
 export type InstallActionStatus =

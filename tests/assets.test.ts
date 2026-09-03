@@ -40,7 +40,7 @@ describe("Codex asset contracts", () => {
     }
   });
 
-  it("uses conventional paths and numbered output names", async () => {
+  it("uses bundled templates and numbered output names", async () => {
     const adr = await readFile(
       path.join(root, "skills", "adr-create", "SKILL.md"),
       "utf8",
@@ -49,7 +49,11 @@ describe("Codex asset contracts", () => {
       path.join(root, "skills", "hld-create", "SKILL.md"),
       "utf8",
     );
+    expect(adr).toContain("Use the bundled `assets/adr-template.md` exactly");
+    expect(adr).not.toContain("docs/adr/adr-template.md");
     expect(adr).toContain("docs/adr/ADR-NNNN-kebab-title.md");
+    expect(hld).toContain("Use the bundled `assets/hld-template.md` exactly");
+    expect(hld).not.toContain("docs/hld/hld-template.md");
     expect(hld).toContain("docs/hld/HLD-NNNN-kebab-title.md");
   });
 });

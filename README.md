@@ -29,10 +29,10 @@ $adr-create Evaluate whether to use PostgreSQL or DynamoDB for audit data.
 $hld-create Design a tenant provisioning service.
 ```
 
-`$adr-create` uses `docs/adr/adr-template.md` and writes approved documents as
-`docs/adr/ADR-NNNN-kebab-title.md`. `$hld-create` uses `docs/hld/hld-template.md` and writes approved
-documents as `docs/hld/HLD-NNNN-kebab-title.md`. If a conventional template is missing, the skill
-offers a bundled portable fallback and waits for confirmation before creating it.
+`$adr-create` uses its bundled `assets/adr-template.md` and writes approved documents as
+`docs/adr/ADR-NNNN-kebab-title.md`. `$hld-create` uses its bundled `assets/hld-template.md` and writes
+approved documents as `docs/hld/HLD-NNNN-kebab-title.md`. The skills do not look for project-local
+templates.
 
 The package also installs four custom agents for direct use: `adr-research-architect`,
 `hld-architect`, `hld-reviewer`, and `nestjs-expert`.

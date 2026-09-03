@@ -1,6 +1,6 @@
 ---
 name: hld-create
-description: Produce an approval-gated high-level and low-level architecture design using the project's conventional HLD template.
+description: Produce an approval-gated high-level and low-level architecture design using the skill's bundled HLD template.
 ---
 
 # Create a High-Level Design
@@ -12,9 +12,7 @@ stakeholders, and success criteria. Inspect the actual repository before draftin
 `hld-architect` to prepare the high-level design and `hld-reviewer` to review it when those custom
 agents are available; otherwise retain their roles in the active session.
 
-Use `docs/hld/hld-template.md` exactly when it exists. If it is missing, offer to copy the bundled
-`assets/hld-template.md` to that conventional path and wait for explicit confirmation before writing
-the template.
+Use the bundled `assets/hld-template.md` exactly. Do not look for or use a project-local template.
 
 Present only the high-level sections and review findings first. Ask explicitly for approval before
 starting low-level design. After approval, complete the low-level sections. When the repository or
