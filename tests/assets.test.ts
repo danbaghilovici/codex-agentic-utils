@@ -52,6 +52,9 @@ describe("Codex asset contracts", () => {
     expect(adr).toContain("Use the bundled `assets/adr-template.md` exactly");
     expect(adr).not.toContain("docs/adr/adr-template.md");
     expect(adr).toContain("docs/adr/ADR-NNNN-kebab-title.md");
+    expect(adr).toContain("repository-root `ADR/` directory");
+    expect(adr).toContain("delete that specific source proposal");
+    expect(adr).toContain("Do not leave a duplicate in `ADR/`");
     expect(hld).toContain("Use the bundled `assets/hld-template.md` exactly");
     expect(hld).not.toContain("docs/hld/hld-template.md");
     expect(hld).toContain("docs/hld/HLD-NNNN-kebab-title.md");

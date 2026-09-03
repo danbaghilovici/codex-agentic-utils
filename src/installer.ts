@@ -27,7 +27,8 @@ Use the installed ADR and HLD workflows only when the user explicitly invokes $a
 $hld-create. The workflows use the custom agents installed under .codex/agents/; they may also
 be selected directly when their specialist role fits the user request.
 
-- $adr-create uses its bundled assets/adr-template.md and writes approved ADRs under docs/adr/.
+- $adr-create uses its bundled assets/adr-template.md and promotes approved ADR/ proposals to
+  docs/adr/ (removing the source proposal after the destination is saved).
 - $hld-create uses its bundled assets/hld-template.md and writes approved architecture documents
   under docs/hld/.
 ${AGENTS_END}`;

@@ -77,6 +77,10 @@ describe("safe installer", () => {
     expect(agents).toContain("Keep this.");
     expect(agents).toContain("$adr-create");
     expect(agents).toContain("bundled assets/adr-template.md");
+    expect(agents).toContain("promotes approved ADR/ proposals to");
+    expect(agents).toContain(
+      "removing the source proposal after the destination is saved",
+    );
     expect(agents).toContain("bundled assets/hld-template.md");
     expect(agents).not.toContain("missing project template");
 

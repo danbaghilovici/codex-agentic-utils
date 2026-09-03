@@ -16,5 +16,8 @@ Use the bundled `assets/adr-template.md` exactly. Do not look for or use a proje
 
 Present the completed ADR draft for review. Do not write the ADR until the user explicitly approves
 the document. On approval, scan `docs/adr/` for existing `ADR-NNNN-*.md` files, choose the next unused
-four-digit number, and save `docs/adr/ADR-NNNN-kebab-title.md`. Do not overwrite an existing ADR
-without explicit user direction.
+four-digit number, and save `docs/adr/ADR-NNNN-kebab-title.md`. If the approved draft is stored in the
+repository-root `ADR/` directory, promote it by moving it to that destination: verify the destination
+was saved successfully, then delete that specific source proposal. Do not leave a duplicate in `ADR/`,
+do not delete unrelated proposals there, and do not overwrite an existing ADR without explicit user
+direction.
