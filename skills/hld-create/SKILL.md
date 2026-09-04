@@ -19,7 +19,10 @@ starting low-level design. After approval, complete the low-level sections. When
 proposed implementation uses NestJS, request `nestjs-expert` validation and incorporate or surface
 its findings; otherwise state that NestJS validation is not applicable.
 
-Present the complete design and request final approval. Do not write the document before that
-approval. On approval, scan `docs/hld/` for `HLD-NNNN-*.md`, choose the next unused four-digit number,
-and save `docs/hld/HLD-NNNN-kebab-title.md`. Never overwrite an existing HLD without explicit user
+Save the completed design as a review proposal in the repository-root `HLD/` directory and request
+final approval. Do not write the final HLD under `docs/hld/` before that approval. On approval, scan
+`docs/hld/` for `HLD-NNNN-*.md`, choose the next unused four-digit number, and promote the approved
+proposal by moving it to `docs/hld/HLD-NNNN-kebab-title.md`: verify the destination was saved
+successfully, then delete that specific source proposal. Do not leave a duplicate in `HLD/`, do not
+delete unrelated proposals there, and do not overwrite an existing HLD without explicit user
 direction.

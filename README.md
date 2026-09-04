@@ -33,7 +33,9 @@ $hld-create Design a tenant provisioning service.
 `docs/adr/ADR-NNNN-kebab-title.md`. When the approved proposal is stored in the repository-root
 `ADR/` directory, it is moved there and the source proposal is removed after the destination is saved.
 `$hld-create` uses its bundled `assets/hld-template.md` and writes approved documents as
-`docs/hld/HLD-NNNN-kebab-title.md`. The skills do not look for project-local templates.
+`docs/hld/HLD-NNNN-kebab-title.md`. It first saves the completed design as a proposal in the
+repository-root `HLD/` directory, then moves the approved proposal after the destination is saved.
+The skills do not look for project-local templates.
 
 The package also installs four custom agents for direct use: `adr-research-architect`,
 `hld-architect`, `hld-reviewer`, and `nestjs-expert`.

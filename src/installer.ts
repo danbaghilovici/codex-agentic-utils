@@ -29,8 +29,8 @@ be selected directly when their specialist role fits the user request.
 
 - $adr-create uses its bundled assets/adr-template.md and promotes approved ADR/ proposals to
   docs/adr/ (removing the source proposal after the destination is saved).
-- $hld-create uses its bundled assets/hld-template.md and writes approved architecture documents
-  under docs/hld/.
+- $hld-create uses its bundled assets/hld-template.md and promotes approved HLD/ proposals to
+  docs/hld/ (removing the source proposal after the destination is saved).
 ${AGENTS_END}`;
 
 export type InstallActionStatus =

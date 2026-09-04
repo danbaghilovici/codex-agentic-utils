@@ -82,6 +82,7 @@ describe("safe installer", () => {
       "removing the source proposal after the destination is saved",
     );
     expect(agents).toContain("bundled assets/hld-template.md");
+    expect(agents).toContain("promotes approved HLD/ proposals to");
     expect(agents).not.toContain("missing project template");
 
     for (const [skill, template] of [

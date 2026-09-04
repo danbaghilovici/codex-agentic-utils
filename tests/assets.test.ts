@@ -66,5 +66,8 @@ describe("Codex asset contracts", () => {
     expect(hld).toContain("Use the bundled `assets/hld-template.md` exactly");
     expect(hld).not.toContain("docs/hld/hld-template.md");
     expect(hld).toContain("docs/hld/HLD-NNNN-kebab-title.md");
+    expect(hld).toContain("repository-root `HLD/` directory");
+    expect(hld).toContain("delete that specific source proposal");
+    expect(hld).toContain("Do not leave a duplicate in `HLD/`");
   });
 });

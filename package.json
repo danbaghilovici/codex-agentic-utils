@@ -1,6 +1,6 @@
 {
   "name": "codex-agentic-utils",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Codex-native ADR and architecture-design skills with reusable specialist agents",
   "type": "module",
   "main": "./dist/index.js",
